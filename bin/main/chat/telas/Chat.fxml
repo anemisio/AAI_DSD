@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="600.0" prefWidth="480.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.controller.ChatController">
+   <children>
+      <Label alignment="CENTER" prefHeight="46.0" prefWidth="480.0" style="-fx-background-color: #142634;" text="Bem Vindo ao LaperZaper" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutY="46.0" prefHeight="264.0" prefWidth="480.0" style="-fx-background-color: #142634;" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextArea id="txt_msg" fx:id="mensagemTextArea" focusTraversable="false" layoutX="24.0" layoutY="105.0" onKeyPressed="#buttonPressed" prefHeight="136.0" prefWidth="418.0" promptText="Digite a mensagem...">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextArea>
+      <Text fill="WHITE" layoutX="24.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite o destinatário (opcional):">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Text>
+      <TextField id="txt_recipient" fx:id="recipientTextField" disable="false" layoutX="24.0" layoutY="70.0" onKeyPressed="#buttonPressed" promptText="Ex: Jose">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <CheckBox fx:id="box" layoutX="180.0" layoutY="74.0" mnemonicParsing="false" onAction="#editable" text="Manter destinatário" textFill="WHITE" />
+      <Button id="btn_enviar" layoutX="301.0" layoutY="251.0" mnemonicParsing="false" onAction="#btnEnviarClick" onKeyPressed="#buttonPressed" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #3CB371;" text="Enviar" textFill="WHITE" />
+      <Button id="btn_limpar" layoutX="375.0" layoutY="251.0" mnemonicParsing="false" onAction="#btnLimparClick" onKeyPressed="#buttonPressed" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #D32222;" text="Limpar" textFill="WHITE" />
+      <TableView id="tabela" fx:id="mensagensTableView" editable="true" layoutY="309.0" prefHeight="292.0" prefWidth="480.0" style="-fx-background-color: #DCE9F2;">
+        <columns>
+          <TableColumn id="t_name" fx:id="nameTableColumn" prefWidth="120.0" text="Enviado Por" />
+          <TableColumn id="t_msg" fx:id="mensagemTableColumn" prefWidth="358.0" text="Mensagens" />
+        </columns>
+      </TableView>
+      <Text id="msg_alert" fx:id="alertaText" fill="#d34040" layoutX="24.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text id="msg_infor" fx:id="inforText" fill="#59ff61" layoutX="24.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+   </children>
+</AnchorPane>

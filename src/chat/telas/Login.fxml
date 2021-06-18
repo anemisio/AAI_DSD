@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onKeyPressed" prefHeight="207.0" prefWidth="480.0" style="-fx-background-color: #142634;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chat.controller.LoginController">
+	<children>
+		<Label alignment="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="46.0" prefWidth="480.0" style="-fx-background-color: #142634;" text="LOGIN" textFill="WHITE">
+			<font>
+				<Font name="Arial Bold" size="24.0" />
+			</font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+		</Label>
+		<Text fill="WHITE" fontSmoothingType="LCD" layoutX="166.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome de Usuário">
+			<font>
+				<Font name="Arial" size="14.0" />
+			</font>
+		</Text>
+		<TextField id="txt_name" fx:id="txt_name" layoutX="166.0" layoutY="104.0" promptText="Ex: Kleber..." />
+		<Button id="btn_verificar" layoutX="231.0" layoutY="135.0" mnemonicParsing="false" onAction="#btnVerificarClick" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: #3CB371;" text="Entrar" textFill="WHITE" />
+		<Text id="msg" fx:id="msg" fill="#d34040" layoutX="126.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="244.0" />
+	</children>
+</AnchorPane>

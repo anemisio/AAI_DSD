@@ -1,0 +1,21 @@
+apply plugin:'java'
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ['src']
+		}
+	}
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	// https://mvnrepository.com/artifact/org.apache.activemq/activemq-all
+	compile group: 'org.apache.activemq', name: 'activemq-all', version: '5.4.2'
+	
+	// https://mvnrepository.com/artifact/javax.jms/jms
+	compile group: 'javax.jms', name: 'jms', version: '1.1'
+}
