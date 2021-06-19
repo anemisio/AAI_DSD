@@ -87,6 +87,8 @@ public class ChatController {
 		}
 	}
 	
+	/** verificar se o usuário esta vazio capitura e envia a mensagem para o destinatário	*/
+
 	@FXML
 	private void enviarMensagem() {
 		String mensagem = mensagemTextArea.getText();
@@ -107,7 +109,10 @@ public class ChatController {
 			alertaText.setText("Campo de mensagem vazio.");
 		}
 	}
-	
+	/* *
+		
+inibi  os alertas de erro 		
+		*/
 	private void cleanAlerts() {
 		alertaText.setText("");
 		inforText.setText("");
@@ -126,8 +131,10 @@ public class ChatController {
 	public void initData(MensageController app) {
 		this.app = app;
 		atualizarMensagens();
-	}
-	
+	}/*  *
+	t
+	define o autor de recebimento da mensagem		
+	*/
 	private void atualizarMensagens() {
 		nameTableColumn.setCellValueFactory(new PropertyValueFactory<>("autor"));
 		mensagemTableColumn.setCellValueFactory(new PropertyValueFactory<>("mensagem"));
